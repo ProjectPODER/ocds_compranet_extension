@@ -11,6 +11,10 @@
   "schemas": [
     "release-schema.json"
   ],
+  "codelists": [
+    "status-mx-cnet.csv",
+    "gov-level.csv"
+  ],
   "compatibility": [
     "1.1"
   ],
