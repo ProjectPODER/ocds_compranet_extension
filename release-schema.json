@@ -3,15 +3,23 @@
     "Tender": {
       "properties": {
         "consolidatedProcessMxCnet": {
-          "title": "Consolidated Process",
+          "title": "Consolidated Process Compranet Mexico",
           "description": "Consolidated Process in COMPRANET México. Identifies whether the contract is part of a consolidated purchase",
           "type": [
             "boolean",
             "null"
           ]
         },
+        "procurementCategoryMxCnet": {
+          "title": "Procurement Category Compranet Mexico",
+          "description": "Procurement Category in COMPRANET México. Identifies the procurement category used by the buyer",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "procurementMethodMxCnet": {
-          "title": "Procurement Method",
+          "title": "Procurement Method Compranet Mexico",
           "description": "Procurement Method in COMPRANET México. Identifies the procurement method used by the buyer",
           "type": [
             "string",
@@ -19,7 +27,7 @@
           ]
         },
         "procurementMethodCharacterMxCnet": {
-          "title": "Procurement character",
+          "title": "Procurement character Compranet Mexico",
           "description": "Procurement character in COMPRANET México. Indicates the character of the procurement method used by the buyer",
           "type": [
             "string",
@@ -27,7 +35,7 @@
           ]
         },
         "procurementMethodDetailsTemplateMxCnet": {
-          "title": "Procurement Method Details",
+          "title": "Procurement Method Details Compranet Mexico",
           "description": "Procurement Method Details in COMPRANET México. Indicates the template selected by the buyer's contact point while creating the contracting process and corresponds to the procurement method being used.",
           "type": [
             "string",
@@ -55,7 +63,7 @@
           ]
         },
         "statusMxCnet": {
-          "title": "Contract Status",
+          "title": "Contract Status Compranet Mexico",
           "description": "Contract Status in COMPRANET México",
           "type": [
             "string",
@@ -65,7 +73,7 @@
           "openCodelist": true
         },
         "multiyearContractMxCnet": {
-          "title": "Multiyear Contract",
+          "title": "Multiyear Contract Compranet Mexico",
           "description": "Multiyear Contract in COMPRANET México. Indicates whether a contract spans more than one fiscal period.",
           "type": [
             "boolean",
@@ -73,8 +81,16 @@
           ]
         },
         "filedMxCnet": {
-          "title": "Filed contract",
+          "title": "Filed contract Compranet Mexico",
           "description": "Filed contract in COMPRANET México. Classification state that indicates if the electronic element that contains the relevant contract data has been filed inside the system. This has no impact on publishing of the information being reported.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "hasAmendments": {
+          "title": "Has amendments",
+          "description": "Indicates whether a published contract has amendments associated with it.",
           "type": [
             "boolean",
             "null"
@@ -84,6 +100,42 @@
     },
     "Organization": {
       "properties": {
+          "additionalIdentifiers": {
+              "properties": {
+                  "verified": {
+                      "title": "Verified by SAT",
+                      "description": "Describes whether the party is oficially verified by SAT in Mexico",
+                      "type": [
+                          "string",
+                          "null"
+                      ]
+                  }
+              }
+          },
+          "contactPoint": {
+              "properties": {
+                  "id": {
+                      "title": "Contact Point ID",
+                      "description": "Unique identifier for the Contact Point",
+                      "type": [
+                          "string",
+                          "null"
+                      ]
+                  }
+              }
+          },
+          "memberOf": {
+              "properties": {
+                  "initials": {
+                      "title": "Initials",
+                      "description": "Initials or short name of the institution",
+                      "type": [
+                          "string",
+                          "null"
+                      ]
+                  }
+              }
+          },
         "details": {
           "properties": {
             "govLevel": {
@@ -94,6 +146,24 @@
                 "null"
               ],
               "codelist": "gov-level.csv",
+              "openCodelist": true
+            },
+            "classification": {
+              "title": "Party Classification",
+              "description": "A general classification of the parties involved",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "type": {
+              "title": "Party Type",
+              "description": "Indicates whether the party is a company or a person.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "party-type.csv",
               "openCodelist": true
             },
             "scaleReportedByBuyerMxCnet": {
